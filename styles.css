@@ -33,6 +33,8 @@
     border-radius: 4px;
 }
 
+
+
 .search-button{
     width: 60px;
     height: 40px;
@@ -62,4 +64,43 @@ a:hover{
 
 .next-button{
     margin-left: 10px;
+}
+
+
+
+.modal-background{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rbga(0,0,0,0.2), 0 7px 20px 0 rbga(0,0,0,0.17);
+}
+
+.close-modal{
+    float: right;
+    color: #ccc;
+    font-size: 30px;
+
+}
+
+.close-modal:hover, .close-modal:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.result-list-item:hover{
+    cursor: pointer;
 }
