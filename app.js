@@ -1,8 +1,10 @@
+require('dotenv').config();
 
-import config from "./config.js";
 
 
-const ACCESS_KEY = config.accessKey;
+
+const API_KEY = process.env.ACCESS_KEY
+console.log(API_KEY);
 const searchForm = document.getElementById("search-form");
 searchForm.addEventListener('submit', handleSubmit);
 
@@ -73,7 +75,7 @@ function pagination(numPages) {
 
 async function queryUnsplash(userQuery) {
 
-    const endpoint = `https://api.unsplash.com/search/photos?query=${userQuery}&per_page=10&page=${currentPage}&client_id=${ACCESS_KEY}`;
+    const endpoint = `https://api.unsplash.com/search/photos?query=${userQuery}&per_page=10&page=${currentPage}&client_id=${API_KEY}`;
     const res = await fetch(endpoint);
     if(!res.ok){
         throw Error(res.statusText)
