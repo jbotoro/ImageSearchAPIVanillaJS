@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "dotenv -- browserify app.js -t envify -o bundle.js",
-    "start": "npm run build && open http://localhost:8080 && node server.js "
+    "start": "open http://localhost:8080 && node server.js "
   },
   "repository": {
     "type": "git",
@@ -18,12 +17,5 @@
     "url": "https://github.com/jbotoro/ImageSearchAPIVanillaJS/issues"
   },
   "homepage": "https://github.com/jbotoro/ImageSearchAPIVanillaJS#readme",
-  "dependencies": {
-    "dotenv": "^8.6.0"
-  },
-  "devDependencies": {
-    "browserify": "^17.0.0",
-    "dotenv-cli": "^4.0.0",
-    "envify": "^4.1.0"
-  }
+  "devDependencies": {}
 }

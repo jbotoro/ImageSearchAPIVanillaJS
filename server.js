@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 
 const http = require('http');
 const fs = require('fs');
@@ -18,7 +18,7 @@ fs.readFile('./index.html', function (err, data) {
     }
     html = data;
 });
-fs.readFile('./bundle.js', function (err, data) {
+fs.readFile('./app.js', function (err, data) {
     if(err) {
         throw err;
     }
@@ -43,7 +43,7 @@ http.createServer((req,res) => {
         res.end();
         return
     }
-    if(req.url.indexOf('bundle.js') != -1){
+    if(req.url.indexOf('app.js') != -1){
         res.writeHead(200, {'Content-Type': 'text/javascript'})
         res.write(js);
         res.end();

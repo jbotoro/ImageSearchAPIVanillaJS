@@ -1,7 +1,7 @@
-require('dotenv').config();
 
 
-const API_KEY = process.env.KEY
+
+const API_KEY = '55X3XQ7eeQq6Bt2mq1s6bRzEyC-FziKXXHz-mSM7crM';
 
 const searchForm = document.getElementById("search-form");
 searchForm.addEventListener('submit', handleSubmit);
