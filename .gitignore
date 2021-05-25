@@ -1,4 +1,3 @@
-bundle.js
-config.js
+.env
+/bundle.js
 /node_modules
-/.env

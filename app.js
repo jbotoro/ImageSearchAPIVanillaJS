@@ -1,10 +1,8 @@
 require('dotenv').config();
 
 
+const API_KEY = process.env.KEY
 
-
-const API_KEY = process.env.ACCESS_KEY
-console.log(API_KEY);
 const searchForm = document.getElementById("search-form");
 searchForm.addEventListener('submit', handleSubmit);
 
@@ -18,7 +16,6 @@ let currentImages
 // handle search, send query to api endpoint
 
 function handleSubmit(e) {
-    // console.log('handling search...')
     e.preventDefault();
     userQuery = document.getElementById("search").value;
     fetchSearchResults(userQuery);
